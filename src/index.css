@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 84% 60%;
+
+    --radius: 0.75rem;
+
+    /* ALPHA 1 Custom Design Tokens */
+    --alpha-red: 0 84% 60%;
+    --alpha-red-glow: 0 84% 60% / 0.3;
+    --alpha-dark: 0 0% 8%;
+    --alpha-dark-card: 0 0% 12%;
+    --alpha-gray: 0 0% 20%;
+    --alpha-light: 0 0% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 70%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(0 84% 60% / 0.15), transparent 70%);
+    
+    /* Shadows */
+    --shadow-red-glow: 0 0 30px hsl(var(--alpha-red-glow));
+    --shadow-ambient: 0 10px 40px hsl(0 0% 0% / 0.5);
+    --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode uses same colors as we're already dark themed */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background-image: var(--gradient-glow);
+    background-attachment: fixed;
+    line-height: 1.6;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* ALPHA 1 Component Styles */
+  .alpha-glow {
+    @apply transition-all duration-300;
+    box-shadow: var(--shadow-red-glow);
+  }
+  
+  .alpha-glow:hover {
+    box-shadow: 0 0 40px hsl(var(--alpha-red-glow));
+  }
+  
+  /* Premium Typography */
+  .alpha-heading {
+    @apply font-bold tracking-tight;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  .alpha-subheading {
+    @apply font-medium tracking-wide;
+    letter-spacing: 0.05em;
+  }
+  
+  .alpha-section-divider {
+    @apply w-16 h-0.5 bg-gradient-to-r from-primary to-primary/50 mx-auto;
+  }
+  
+  .alpha-card {
+    @apply bg-card border border-border rounded-xl p-6;
+    background: linear-gradient(135deg, hsl(var(--alpha-dark-card)), hsl(var(--alpha-dark-card)) 50%, hsl(0 0% 14%));
+    box-shadow: var(--shadow-ambient);
+  }
+  
+  .alpha-card:hover {
+    @apply transform -translate-y-1;
+    box-shadow: var(--shadow-elevated);
+    transition: var(--transition-smooth);
+  }
+  
+  .alpha-button {
+    @apply relative overflow-hidden bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold;
+    background: var(--gradient-primary);
+    transition: var(--transition-smooth);
+  }
+  
+  .alpha-button:hover {
+    @apply transform scale-105;
+    box-shadow: var(--shadow-red-glow);
+  }
+  
+  .alpha-button::before {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    content: '';
+    background: linear-gradient(45deg, transparent 30%, hsl(0 0% 100% / 0.2) 50%, transparent 70%);
+  }
+  
+  .alpha-button:hover::before {
+    @apply opacity-100;
+  }
+  
+  .alpha-input {
+    @apply bg-input border border-border rounded-lg px-4 py-3 text-foreground;
+    transition: var(--transition-glow);
+  }
+  
+  .alpha-input:focus {
+    @apply outline-none border-primary;
+    box-shadow: 0 0 0 2px hsl(var(--alpha-red-glow));
+  }
+  
+  .alpha-gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .alpha-floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+  
+  .alpha-pulse {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes pulse-glow {
+    from { box-shadow: 0 0 20px hsl(var(--alpha-red-glow)); }
+    to { box-shadow: 0 0 30px hsl(var(--alpha-red-glow)), 0 0 40px hsl(var(--alpha-red-glow)); }
+  }
+  
+  .alpha-parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}

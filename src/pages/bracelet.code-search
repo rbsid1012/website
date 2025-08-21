@@ -1,0 +1,59 @@
+# Query: bracelet
+# ContextLines: 1
+
+14 results - 5 files
+
+index.html:
+   5      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   6:     <title>ALPHA 1 — ONE RING FOR EVERYTHING</title>
+   7:     <meta name="description" content="Revolutionary NFC wearable ring. Your digital identity, universal access key, and offline payment system." />
+   8      <meta name="author" content="ALPHA 1" />
+
+  14  
+  15:     <meta property="og:title" content="ALPHA 1 — ONE RING FOR EVERYTHING" />
+  16:     <meta property="og:description" content="Revolutionary NFC wearable ring. Your digital identity, universal access key, and offline payment system." />
+  17      <meta property="og:type" content="website" />
+
+src/components/Footer.tsx:
+  16              <p className="text-muted-foreground text-sm">
+  17:               The future of contactless interaction. Experience seamless NFC technology with the ALPHA 1 smart ring.
+  18              </p>
+
+src/pages/FAQ.tsx:
+  10            question: 'What is ALPHA 1?',
+  11:           answer: 'ALPHA 1 is a revolutionary NFC smart ring that enables seamless contactless interactions. It allows you to share your digital profile, make payments, and access secure identification without needing a phone or app.'
+  12          },
+
+  14            question: 'How does ALPHA 1 work?',
+  15:           answer: 'ALPHA 1 uses passive NFC (Near Field Communication) technology. Simply tap your ring to any NFC-enabled device within 4cm to instantly transmit your information or complete transactions. No battery required - it\'s powered by the reading device.'
+  16          },
+
+  18            question: 'Do I need to charge ALPHA 1?',
+  19:           answer: 'No! ALPHA 1 uses passive NFC technology, which means it requires no battery or charging. The ring draws power from the NFC reader when in range, making it completely maintenance-free.'
+  20          },
+
+  34          {
+  35:           question: 'Can someone steal my information by scanning my ring?',
+  36            answer: 'No. ALPHA 1 requires physical proximity (within 4cm) and uses encrypted data transmission. Additionally, sensitive information is protected by PIN verification and can only be accessed at authorized locations through geofencing.'
+
+  98            question: 'How much does ALPHA 1 cost?',
+  99:           answer: 'Early access pricing starts at $299. This includes the ring, initial setup, and one year of premium features. Pricing may increase after the early access period.'
+  100          },
+
+src/pages/HowItWorks.tsx:
+  8        title: 'Tap to Connect',
+  9:       description: 'Simply tap your ALPHA 1 ring to any NFC-enabled device to instantly share your digital profile.',
+  10        details: 'No apps to download, no QR codes to scan. The NFC chip automatically transmits your information.'
+
+src/pages/sample.txt:
+  174              >
+  175:               Be among the first to experience the revolutionary ALPHA 1 smart ring.
+  176              </motion.p>
+
+  267          >
+  268:           <h2 className="text-2xl md:text-3xl font-bold text-center">Reserve Your ring</h2>
+  269  
+
+  353              ) : (
+  354:               'Reserve Your ring'
+  355              )}
