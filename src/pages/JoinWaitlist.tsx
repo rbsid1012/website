@@ -142,7 +142,7 @@ if (isSubmitted) {
 
         <div className="absolute inset-0">
           <img
-            src="/src/assets/team-working.jpg"
+            src="/src/assets/team-working.png"
             alt="Cosmic Attire Team"
             className="w-full h-full object-cover scale-105 animate-pulse-slow"
           />

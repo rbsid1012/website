@@ -45,10 +45,10 @@ const Sidebar = () => {
         />
       )}
 
-      {/* ✅ Show sidebar ONLY when expanded */}
-      {(isExpanded || isMobile) && (
+      {/* ✅ Sidebar - only visible when expanded */}
+      {isExpanded && (
         <div
-          className={`fixed right-0 top-0 h-full w-64 bg-[#141414] text-white z-50 transition-all duration-300`}
+          className={`fixed right-0 top-0 h-full w-64 bg-[#141414] text-white z-50 transition-transform duration-300`}
         >
           {/* Logo */}
           <div className="p-4 border-b border-border">
@@ -70,7 +70,7 @@ const Sidebar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  onClick={() => isMobile && setIsExpanded(false)}
+                  onClick={() => isMobile && setIsExpanded(false)} // auto-close on mobile
                   className={`group relative flex items-center justify-start w-full p-3 rounded-lg transition-all duration-300 ${
                     isItemActive
                       ? "bg-primary/20 text-primary"
@@ -86,12 +86,11 @@ const Sidebar = () => {
         </div>
       )}
 
-      {/* ✅ Always-visible toggle button (desktop & mobile) */}
-<button
-  onClick={toggleSidebar}
-  className="fixed top-4 right-4 z-50 p-1 text-white"
->
-
+      {/* ✅ Toggle button */}
+      <button
+        onClick={toggleSidebar}
+        className="fixed top-4 right-4 z-50 p-2 rounded-md bg-[#141414] text-white lg:hidden"
+      >
         {isExpanded ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
     </>
