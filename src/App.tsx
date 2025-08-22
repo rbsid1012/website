@@ -3,7 +3,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar"; // your custom sidebar
+import { HelmetProvider, Helmet } from "react-helmet-async";
+
+import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 
 import Index from "./pages/Index";
@@ -21,25 +23,49 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <div className="flex min-h-screen flex-row-reverse"> {/* sidebar on right */}
-          <Sidebar />
-          <div className="flex-1 flex flex-col bg-background">
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/product" element={<Product />} />
-                <Route path="/how-it-works" element={<HowItWorks />} />
-                <Route path="/join-waitlist" element={<JoinWaitlist />} />
-                <Route path="/creator-access" element={<CreatorAccess />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-            <Footer />
+      <HelmetProvider>
+        <Helmet>
+          {/* Change these to your logo + site name */}
+          <title>Cosmic Attire</title>
+          <link rel="icon" type="image/png" href="/favicon-v3.png" />
+                 {/* Standard favicon */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-v3.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-v3.png" />
+
+        {/* Apple touch icon (Safari, iOS, Mac) */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+        {/* Mask icon for Safari pinned tabs */}
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+
+        {/* Web app manifest (helps Safari too) */}
+        <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Theme color */}
+        <meta name="theme-color" content="#ffffff" />
+        </Helmet>
+
+        <BrowserRouter>
+          <div className="flex min-h-screen flex-row-reverse">
+            {/* sidebar on right */}
+            <Sidebar />
+            <div className="flex-1 flex flex-col bg-background">
+              <main className="flex-1">
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/product" element={<Product />} />
+                  <Route path="/how-it-works" element={<HowItWorks />} />
+                  <Route path="/join-waitlist" element={<JoinWaitlist />} />
+                  <Route path="/creator-access" element={<CreatorAccess />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
           </div>
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </HelmetProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
