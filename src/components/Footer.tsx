@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-xl font-bold alpha-gradient-text">ALPHA 1</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              The future of contactless interaction. Experience seamless NFC technology with the ALPHA 1 smart bracelet.
+              The future of contactless interaction. Experience seamless NFC technology with the ALPHA 1 smart ring.
             </p>
           </div>
 
@@ -39,10 +39,10 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Access</h3>
             <div className="space-y-2 text-sm">
               <Link to="/join-waitlist" className="text-muted-foreground hover:text-primary transition-colors block">
-                Join Waitlist
+                Join The Team
               </Link>
               <Link to="/creator-access" className="text-muted-foreground hover:text-primary transition-colors block">
-                Creator Access
+                Partnerships
               </Link>
             </div>
           </div>
@@ -51,12 +51,31 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Connect</h3>
             <div className="space-y-2 text-sm">
-              <a href="mailto:modnexsolutions@gmail.com" className="text-muted-foreground hover:text-primary transition-colors block">
-                modnexsolutions@gmail.com
+              <a
+                href="mailto:siddhartha@cosmicattire.in"
+                className="text-muted-foreground hover:text-primary transition-colors block"
+              >
+                Email
               </a>
-              <div className="text-muted-foreground">
-                Building the future, one pulse at a time.
-              </div>
+
+              {/* Phone Number */}
+              <a
+                href="tel:+916392092199"
+                className="text-muted-foreground hover:text-primary transition-colors block"
+              >
+                Contact Number
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/_cosmic_attire/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors block"
+              >
+                Instagram
+              </a>
+
             </div>
           </div>
         </div>

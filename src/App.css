@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ===============================
+   Mobile View Fixes
+   =============================== */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-section h1,
+  .hero-section p {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    gap: 12px; /* spacing between buttons */
+  }
+}
