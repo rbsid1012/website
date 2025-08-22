@@ -12,16 +12,8 @@ import {
 } from "lucide-react";
 
 const Sidebar = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false); // starts closed
   const location = useLocation();
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   const navItems = [
     { name: "Home", path: "/", icon: Home },
@@ -37,62 +29,68 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* 🔳 Dim background when mobile and expanded */}
-      {isMobile && isExpanded && (
+      {/* Dim background when sidebar is open */}
+      {isExpanded && (
         <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           onClick={() => setIsExpanded(false)}
         />
       )}
 
-      {/* ✅ Sidebar - only visible when expanded */}
-      {isExpanded && (
-        <div
-          className={`fixed right-0 top-0 h-full w-64 bg-[#141414] text-white z-50 transition-transform duration-300`}
-        >
-          {/* Logo */}
-          <div className="p-4 border-b border-border">
-            <div className="flex flex-col items-center space-y-1">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">α1</span>
-              </div>
-              <span className="text-lg font-bold text-white">ALPHA 1</span>
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <nav className="p-4 space-y-2 flex flex-col items-center">
-            {navItems.map((item) => {
-              const isItemActive = isActive(item.path);
-              const Icon = item.icon;
-
-              return (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => isMobile && setIsExpanded(false)} // auto-close on mobile
-                  className={`group relative flex items-center justify-start w-full p-3 rounded-lg transition-all duration-300 ${
-                    isItemActive
-                      ? "bg-primary/20 text-primary"
-                      : "text-muted-foreground hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  <Icon className="w-5 h-5 mr-3" />
-                  <span className="font-medium">{item.name}</span>
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
-      )}
-
-      {/* ✅ Toggle button */}
-      <button
-        onClick={toggleSidebar}
-        className="fixed top-4 right-4 z-50 p-2 rounded-md bg-[#141414] text-white lg:hidden"
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full bg-[#141414] text-white z-50 w-64 transition-transform duration-300 ${
+          isExpanded ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-        {isExpanded ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
+        {/* Logo + cross */}
+        <div className="p-4 border-b border-border flex flex-col items-center relative">
+          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mb-2">
+            <span className="text-primary-foreground font-bold text-sm">α1</span>
+          </div>
+          <span className="text-lg font-bold text-white mb-2">ALPHA 1</span>
+
+          {/* Close button */}
+          <button
+            onClick={toggleSidebar}
+            className="absolute top-4 right-4 p-2 bg-[#141414] rounded-md text-white"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Navigation */}
+        <nav className="p-4 space-y-2 flex flex-col items-center">
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={() => setIsExpanded(false)} // auto-close on click
+                className={`group relative flex items-center justify-start w-full p-3 rounded-lg transition-all duration-300 ${
+                  isActive(item.path)
+                    ? "bg-primary/20 text-primary"
+                    : "text-muted-foreground hover:text-white hover:bg-white/10"
+                }`}
+              >
+                <Icon className="w-5 h-5 mr-3" />
+                <span className="font-medium">{item.name}</span>
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+
+      {/* Hamburger / three-dot button */}
+      {!isExpanded && (
+        <button
+          onClick={toggleSidebar}
+          className="fixed top-4 right-4 z-50 p-2 rounded-md bg-[#141414] text-white"
+        >
+          <Menu className="w-6 h-6" />
+        </button>
+      )}
     </>
   );
 };
