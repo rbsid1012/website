@@ -77,7 +77,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsLoading(true);
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbwG1TJs8U4JlKbYuNST_fcGsbthNMdv0XytejazMVx3P7DUHYE8pq1BDIDAW1d1XQXNoA/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbzO9Hqjm1Mvsupy0F590wComjjlp_GglxixvS1bHo_DLe2G50p7YBsgy6X3cqpzlNJjcQ/exec", {
       method: "POST",
       mode: "no-cors", // required for browser -> Apps Script
       headers: { "Content-Type": "application/json" },
@@ -334,6 +334,33 @@ if (isSubmitted) {
       className="alpha-input w-full pl-10"
       placeholder="+1 234 567 890"
     />
+  </div>
+</div>
+{/* ROLE DROPDOWN */}
+<div className="space-y-2">
+  <label htmlFor="role" className="block text-sm font-medium">
+    Select Your Role *
+  </label>
+  <div className="relative">
+    <select
+      id="role"
+      name="role"
+      required
+      value={formData.role}
+      onChange={handleChange}
+      className="alpha-input w-full pl-3 pr-10 py-2 bg-neutral-900 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+    >
+      <option value="" disabled>
+        -- Choose a role --
+      </option>
+      <option value="Social Media Strategist">Social Media Strategist</option>
+      <option value="Prompt Engineer Trainne Intern">
+        Prompt Engineer Trainne Intern
+      </option>
+      <option value="IoT Solutions Intern">IoT Solutions Intern</option>
+      <option value="Marketing Strategy Associate">Marketing Strategy Associate</option>
+      <option value="Research Analyst">Research Analyst</option>
+    </select>
   </div>
 </div>
 

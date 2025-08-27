@@ -19,7 +19,7 @@ const Sidebar = () => {
     { name: "Home", path: "/", icon: Home },
     { name: "Product", path: "/product", icon: Package },
     { name: "How It Works", path: "/how-it-works", icon: Settings },
-    { name: "Join Waitlist", path: "/join-waitlist", icon: UserPlus },
+    { name: "Join Team", path: "/join-waitlist", icon: UserPlus },
     { name: "Partner Access", path: "/creator-access", icon: Users },
     { name: "FAQ", path: "/faq", icon: HelpCircle },
   ];

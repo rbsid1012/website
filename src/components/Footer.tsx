@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2025 Cosmic Attire. All rights reserved. Redefining interaction.</p>
+          <p>&copy; 2025 Modnex Solutions Pvt. Ltd. All rights reserved. Redefining interaction.</p>
         </div>
       </div>
     </footer>
