@@ -77,7 +77,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsLoading(true);
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbzO9Hqjm1Mvsupy0F590wComjjlp_GglxixvS1bHo_DLe2G50p7YBsgy6X3cqpzlNJjcQ/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbwBs2xrG8cp2-9i6NJy25U1k-vMwRXNw5VkIlV8_2ojs8zjDlAx--BJm3gReZICUUVjJg/exec", {
       method: "POST",
       mode: "no-cors", // required for browser -> Apps Script
       headers: { "Content-Type": "application/json" },
