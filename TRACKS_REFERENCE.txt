@@ -1,0 +1,66 @@
+// Challenge Tracks for Round 1
+const problemStatements = [
+  // BLE Tracks
+  {
+    id: 1,
+    title: "BLE Proximity & Localization",
+    description: "This track focuses on using Bluetooth Low Energy signals to detect the presence of nearby devices and estimate their distance or relative location. It emphasizes indoor localization techniques where traditional GPS systems are ineffective.",
+    category: "BLE Tracks",
+    icon: Cpu,
+  },
+  {
+    id: 2,
+    title: "BLE Secure Communication & Pairing",
+    description: "This track concentrates on establishing secure BLE connections between devices. The focus is on authenticated pairing, encrypted communication, and preventing unauthorized access or data interception.",
+    category: "BLE Tracks",
+    icon: Shield,
+  },
+  
+  // IoT Web Server, Back-End & Cyber Security Tracks
+  {
+    id: 3,
+    title: "IoT Web Dashboard & Device Management",
+    description: "This track focuses on designing web-based platforms that allow users to monitor, manage, and control IoT devices remotely. Emphasis is placed on real-time data visualization and device control through web interfaces.",
+    category: "IoT Web & Security",
+    icon: Cpu,
+  },
+  {
+    id: 4,
+    title: "IoT Cyber Security & Intrusion Detection",
+    description: "This track focuses on protecting IoT systems against cyber threats. It involves monitoring system behavior to detect anomalies, unauthorized access, or malicious activity.",
+    category: "IoT Web & Security",
+    icon: Shield,
+  },
+  {
+    id: 5,
+    title: "Secure OTA & Firmware Management",
+    description: "This track explores secure methods for remotely updating IoT device firmware. It emphasizes firmware authenticity, integrity verification, and safe update mechanisms to prevent device compromise.",
+    category: "IoT Web & Security",
+    icon: Zap,
+  },
+  
+  // NFC Technology Tracks
+  {
+    id: 6,
+    title: "NFC Authentication & Access Control",
+    description: "This track focuses on using Near Field Communication for secure authentication and access control systems. It emphasizes short-range communication for identity verification and permission-based access.",
+    category: "NFC Technology",
+    icon: Shield,
+  },
+  {
+    id: 7,
+    title: "NFC Secure Transactions & Identity Systems",
+    description: "This track explores NFC-based systems designed for secure transactions and identity management. The focus is on data protection, secure validation, and preventing replay or cloning attacks.",
+    category: "NFC Technology",
+    icon: Shield,
+  },
+  
+  // Open Innovation Track
+  {
+    id: 8,
+    title: "Open Innovation Track",
+    description: "This track allows participants to propose innovative IoT solutions beyond the predefined tracks. Present your unique idea that addresses real-world problems using IoT, BLE, NFC, or related technologies. Your solution should demonstrate creativity, technical feasibility, and potential impact.",
+    category: "Open Innovation",
+    icon: Lightbulb,
+  },
+];
