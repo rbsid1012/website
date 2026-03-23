@@ -8,6 +8,10 @@ import TeamMemberCard from "@/components/about/TeamMemberCard";
 import JoinUsCard from "@/components/about/JoinUsCard";
 import FilterPills from "@/components/about/FilterPills";
 import { ArrowRight, Mail } from "lucide-react";
+import siddhartha from "@/assets/Siddhartha_Founder.jpeg";
+import krishang from "@/assets/Krishang_Bali.png";
+import divyansh from "@/assets/Divyansh_Head of IOT.png";
+import mehar from "@/assets/Mehar_Dua.png";
 
 // Leadership data
 const leaders = [
@@ -15,25 +19,25 @@ const leaders = [
     name: "Siddhartha Yadav",
     role: "Founder & CEO",
     quote: "Nothing changes if you change nothing.",
-    image: "/src/assets/Siddhartha_Founder.jpeg",
+    image: siddhartha,
   },
   {
     name: "Krishang Bali",
     role: "Co-Founder",
     quote: "Shared belief, relentless effort, and zero ego build unstoppable companies.",
-    image: "/src/assets/Krishang_Bali.png",
+    image:krishang,
   },
   {
     name: "Divyansh Mehta",
     role: "VP Hardware Engineering",
     quote: "Where hardware meets intelligence, innovation begins.",
-    image: "/src/assets/Divyansh_Head of IOT.png",
+    image: divyansh,
   },
   {
     name: "Mehar Dua",
     role: "VP Marketing",
     quote: "Attention is earned, trust is built, and brands are remembered.",
-    image: "/src/assets/Mehar_Dua.png",
+    image: mehar,
   },
 ];
 
