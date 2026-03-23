@@ -253,11 +253,11 @@ const handleSubmit = async (e: any) => {
 
   return (
 
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-28 md:pt-32">
 
       <Header />
 
-      <main className="pt-32 pb-24 px-6">
+      <main className="pb-24 px-4 sm:px-6">
 
         {/* HERO */}
 
@@ -373,7 +373,7 @@ const handleSubmit = async (e: any) => {
           {selectedRole && (
 
             <motion.div
-              className="fixed inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4"
+              className="fixed inset-0 bg-background/80 backdrop-blur-sm flex items-start justify-center p-4 overflow-y-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -384,7 +384,7 @@ const handleSubmit = async (e: any) => {
 
               <motion.div
               ref={modalRef}
-                className="glass-card-elevated p-10 max-w-2xl w-full"
+                className="glass-card-elevated p-6 sm:p-8 max-w-2xl w-full mt-20"
                 initial={{ scale: 0.95 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.95 }}
@@ -440,7 +440,7 @@ const handleSubmit = async (e: any) => {
                     required
                     value={formData.whyHire}
                     onChange={handleChange}
-                    className="w-full bg-secondary/50 border border-border rounded-md px-4 py-3"
+                    className="w-full bg-secondary/50 border border-border rounded-md px-4 py-3 min-h-[120px]"
                   />
 
                   <textarea
@@ -450,7 +450,7 @@ const handleSubmit = async (e: any) => {
                     required
                     value={formData.experience}
                     onChange={handleChange}
-                    className="w-full bg-secondary/50 border border-border rounded-md px-4 py-3"
+                    className="w-full bg-secondary/50 border border-border rounded-md px-4 py-3 min-h-[120px]"
                   />
 
                   <textarea
