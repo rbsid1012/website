@@ -19,7 +19,7 @@ import WebpageH1 from "@/assets/hack/WebpageH1.jpg";
 import WebpageH3 from "@/assets/hack/WebpageH3.jpg";
 import WebpageH5 from "@/assets/hack/WebpageH5.jpg";
 import WebH2 from "@/assets/hack/WebpageH2.jpg";
-import WebH7 from "@/assets/RohitSir.jpg";
+import WebH7 from "@/assets/RohitSir.JPG";
 
 // ✅ CLEAN IMAGE MAP (scalable, no repetition)
 const images = {
