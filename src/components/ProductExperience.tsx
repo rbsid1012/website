@@ -28,7 +28,7 @@ const ProductExperience = () => {
         </motion.div>
 
         {/* Status Cards Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-6 sm:mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
           {/* Access Verified Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,36 +81,7 @@ const ProductExperience = () => {
             </div>
           </motion.div>
 
-          {/* Bio-Data Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            whileHover={{
-              y: -5,
-              scale: 1.02,
-              transition: { duration: 0.25, ease: "easeOut" }
-            }}
-            className="glass-card p-3 sm:p-4 md:p-5 transition-shadow duration-250 hover:shadow-[0_20px_50px_-12px_hsl(var(--crimson)_/_0.3)]"
-          >
-            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                <User className="w-3 h-3 sm:w-4 sm:h-4 text-foreground" />
-              </div>
-              <h4 className="text-xs sm:text-sm font-medium">Bio-Data</h4>
-            </div>
-            <div className="space-y-1 text-[10px] sm:text-xs">
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Heart Rate</span>
-                <span className="text-foreground">72 bpm</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">SpO2</span>
-                <span className="text-foreground">98%</span>
-              </div>
-            </div>
-          </motion.div>
+          
 
           {/* Networking Card */}
           <motion.div

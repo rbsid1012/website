@@ -49,7 +49,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[9px] sm:text-[10px] md:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-muted-foreground/70 mb-3 sm:mb-4"
           >
-            AWT‑IRE Smart Ring Platform
+           Smart Ring Platform
           </motion.p>
 
           {/* Main Headline */}

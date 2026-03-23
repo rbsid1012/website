@@ -12,8 +12,8 @@ const ringFeatures = [
     icon: CreditCard
   },
   { 
-    label: "Biometric Lock", 
-    description: "Fingerprint secured",
+    label: "Secure Verification", 
+    description: "Multi-layer verification for secure access",
     icon: Shield
   },
   { 
@@ -22,8 +22,8 @@ const ringFeatures = [
     icon: MapPin
   },
   { 
-    label: "Emergency SOS", 
-    description: "One-tap distress signal",
+    label: "Instant Kill", 
+    description: "One-Click to Block It All",
     icon: AlertTriangle
   },
 ];
