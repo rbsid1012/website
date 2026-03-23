@@ -11,10 +11,10 @@ const Footer = () => {
               <div className="w-8 h-8 bg-primary rounded-lg alpha-pulse flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-sm">α1</span>
               </div>
-              <span className="text-xl font-bold alpha-gradient-text">ALPHA 1</span>
+              <span className="text-xl font-bold alpha-gradient-text">Omni Key</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              The future of contactless interaction. Experience seamless NFC technology with the ALPHA 1 smart ring.
+              The future of contactless interaction. Experience seamless NFC technology with the Omni Key smart ring.
             </p>
           </div>
 

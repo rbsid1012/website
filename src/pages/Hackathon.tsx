@@ -51,7 +51,7 @@ const HackathonRecap = () => {
 
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
               Builders from across the ecosystem joined the Cosmic Attire
-              Bootcamp to prototype the future of wearable technology using Alpha 1.
+              Bootcamp to prototype the future of wearable technology using Omni Key.
             </p>
           </motion.div>
         </section>

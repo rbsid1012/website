@@ -141,7 +141,7 @@ const About = () => {
             >
               <p className="overline mb-4">Our Team</p>
               <h1 className="headline-lg mb-6">
-                The Minds Behind <span className="text-crimson font-medium">Alpha 1</span>
+                The Minds Behind <span className="text-crimson font-medium">Omni Key</span>
               </h1>
               <p className="body-lg max-w-3xl mx-auto">
                 We are a collective of visionaries, engineers, and designers obsessed with
@@ -195,7 +195,7 @@ const About = () => {
                   but because it's so well integrated into our lives that we forget it's there.
                 </p>
                 <p>
-                  Alpha 1 is our first step toward a future where your digital identity
+                  Omni Key is our first step toward a future where your digital identity
                   is as secure and intuitive as your heartbeat.
                 </p>
                 <p>

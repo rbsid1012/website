@@ -78,7 +78,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-3 relative z-[2]"
           >
-            {/* Primary CTA - View Alpha 1 - Scrolls to ring section */}
+            {/* Primary CTA - View Omni Key - Scrolls to ring section */}
             <button
               onClick={() => {
                 analytics.track("hero_alpha_view");
@@ -94,7 +94,7 @@ const HeroSection = () => {
                 boxShadow: '0 0 20px -5px hsl(var(--crimson) / 0.3), 0 8px 32px -8px hsla(0, 0%, 0%, 0.5)',
               }}
             >
-              View Alpha One
+              View Omni Key
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </button>
 

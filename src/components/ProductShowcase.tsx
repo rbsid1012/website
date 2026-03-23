@@ -97,7 +97,7 @@ const ProductShowcase = () => {
                     boxShadow: '0 4px 16px rgba(220, 20, 60, 0.15), inset 1px 1px 0 rgba(255, 255, 255, 0.08)',
                   }}
                 >
-                  <span className="relative z-10">View Alpha 1</span>
+                  <span className="relative z-10">View Omni Key</span>
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
