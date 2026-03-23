@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
 import { useNavigate } from "react-router-dom";
-import ComingSoon from "@/pages/ComingSoon";
+
 
 import {
   Sparkles,
@@ -19,7 +19,7 @@ import WebpageH1 from "@/assets/hack/WebpageH1.jpg";
 import WebpageH3 from "@/assets/hack/WebpageH3.jpg";
 import WebpageH5 from "@/assets/hack/WebpageH5.jpg";
 import WebH2 from "@/assets/hack/WebpageH2.jpg";
-import WebH7 from "@/assets/hack/WebpageH7.jpg";
+import WebH7 from "@/assets/hack/H7.jpg";
 
 // ✅ CLEAN IMAGE MAP (scalable, no repetition)
 const images = {
