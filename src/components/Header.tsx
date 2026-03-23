@@ -18,8 +18,19 @@ const Header = () => {
   const location = useLocation();
 
   // ✅ Detect careers page
-  const isCareersPage = location.pathname === "/careers";
+  // const isCareersPage = location.pathname === "/careers";
+  const hideFullHeader = [
+  "/hackathon",
+  "/partnerships",
+  "/coming-soon",
+  "/careers",
+  "/about",        // add
+  "/support",      // add
+  ].includes(location.pathname);
 
+  const isHome = location.pathname === "/";
+const shouldHide = hideFullHeader || (isHome && scrolled);
+ 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -49,15 +60,15 @@ const Header = () => {
     <motion.header
       initial={{ opacity: 0, y: -20 }}
       animate={{
-        opacity: isCareersPage ? 0 : 1,
-        y: isCareersPage ? -100 : 0,
+        opacity: shouldHide ? 0 : 1,
+        y: shouldHide ? -100 : 0,
       }}
       transition={{ duration: 0.4 }}
       className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 md:px-8"
       style={{
         paddingTop: "calc(env(safe-area-inset-top, 0px) + 12px)",
         paddingBottom: "8px",
-        pointerEvents: isCareersPage ? "none" : "auto", // 🔥 prevents invisible blocking
+        pointerEvents: hideFullHeader ? "none" : "auto", // 🔥 prevents invisible blocking
       }}
     >
       {/* Desktop Navigation */}

@@ -19,6 +19,7 @@ import HackathonRegister from "./pages/HackathonRegister";
 import HackathonSignin from "./pages/HackathonSignin";
 import HackathonRound1 from "./pages/HackathonRound1";
 import NotFound from "./pages/NotFound";
+import ComingSoon from "@/pages/ComingSoon";
 
 const queryClient = new QueryClient();
 
@@ -60,8 +61,10 @@ const App = () => {
               <Route path="/hackathon/register" element={<HackathonRegister />} />
               <Route path="/hackathon/auth" element={<HackathonSignin />} />
               <Route path="/hackathon/round1" element={<ProtectedRoute><HackathonRound1 /></ProtectedRoute>} />
+              <Route path="/coming-soon" element={<ComingSoon />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
+              
             </Routes>
           </BrowserRouter>
         </TooltipProvider>

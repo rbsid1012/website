@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
 import { useNavigate } from "react-router-dom";
+import ComingSoon from "@/pages/ComingSoon";
 
 import {
   Sparkles,
@@ -17,6 +18,8 @@ import {
 import WebpageH1 from "@/assets/hack/WebpageH1.jpg";
 import WebpageH3 from "@/assets/hack/WebpageH3.jpg";
 import WebpageH5 from "@/assets/hack/WebpageH5.jpg";
+import WebH2 from "@/assets/hack/WebpageH2.jpg";
+import WebH7 from "@/assets/hack/WebpageH7.jpg";
 
 // ✅ CLEAN IMAGE MAP (scalable, no repetition)
 const images = {
@@ -72,7 +75,7 @@ const HackathonRecap = () => {
     <div className="relative overflow-hidden rounded-2xl h-[280px] group">
       {/* Image */}
       <img
-        src="/src/assets/hack/WebpageH2.jpg"
+        src={WebH2}
         alt="Cybersecurity"
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
@@ -108,7 +111,7 @@ const HackathonRecap = () => {
     <div className="relative overflow-hidden rounded-2xl h-[280px] group">
       {/* Image */}
       <img
-        src="/src/assets/hack/WebpageH7.jpg"
+        src={WebH7}
         alt="Industry Guidance"
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
