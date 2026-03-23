@@ -9,6 +9,7 @@ import Philosophy from "@/components/Philosophy";
 // import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import Footer from "@/components/Footer";
 
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
